@@ -1,0 +1,311 @@
+{
+    "auto_close": true,
+    "auto_open": false,
+    "auto_start": false,
+    "grid_size": 75,
+    "name": "BGP_M3",
+    "project_id": "02592c26-abaa-4468-b0d8-95553ef14cce",
+    "revision": 8,
+    "scene_height": 1000,
+    "scene_width": 2000,
+    "show_grid": false,
+    "show_interface_labels": true,
+    "show_layers": false,
+    "snap_to_grid": false,
+    "supplier": null,
+    "topology": {
+        "computes": [],
+        "drawings": [
+            {
+                "drawing_id": "0a3f8caa-052c-4df0-99ac-719dea4754d2",
+                "rotation": 0,
+                "svg": "<svg height=\"105.0\" width=\"368.0\"><ellipse cx=\"184\" cy=\"52\" fill=\"#edd400\" fill-opacity=\"1.0\" rx=\"184\" ry=\"53\" /></svg>",
+                "x": -479,
+                "y": -75,
+                "z": -1
+            },
+            {
+                "drawing_id": "425931bd-8e79-44d9-8033-6bf009e04a44",
+                "rotation": 0,
+                "svg": "<svg height=\"395.0\" width=\"197.0\"><ellipse cx=\"98\" cy=\"197\" fill=\"#729fcf\" fill-opacity=\"1.0\" rx=\"99\" ry=\"198\" /></svg>",
+                "x": -94,
+                "y": -217,
+                "z": -1
+            },
+            {
+                "drawing_id": "15508b57-8c0a-4af4-9b25-c9a2cb31b93f",
+                "rotation": 0,
+                "svg": "<svg height=\"25\" width=\"72\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\">AS65000</text></svg>",
+                "x": -31,
+                "y": -203,
+                "z": 1
+            },
+            {
+                "drawing_id": "79ac3af2-aa3f-46e6-a865-eadc88764bf4",
+                "rotation": 0,
+                "svg": "<svg height=\"25\" width=\"72\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\">AS64400</text></svg>",
+                "x": -434,
+                "y": -57,
+                "z": 1
+            },
+            {
+                "drawing_id": "1fd039fb-c6b8-4b65-b8ae-5516649b341e",
+                "rotation": 0,
+                "svg": "<svg height=\"25\" width=\"117\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\">203.0.113.1/30</text></svg>",
+                "x": -246,
+                "y": -32,
+                "z": 1
+            },
+            {
+                "drawing_id": "23390998-c4a0-4f60-9e0e-0efa8f6009d0",
+                "rotation": 0,
+                "svg": "<svg height=\"25\" width=\"117\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\">203.0.113.1/30</text></svg>",
+                "x": -201,
+                "y": -141,
+                "z": 1
+            },
+            {
+                "drawing_id": "397470d5-80e9-4aa8-823f-f706aee2ece6",
+                "rotation": 0,
+                "svg": "<svg height=\"25\" width=\"99\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\">192.0.2.1/30</text></svg>",
+                "x": -22,
+                "y": -107,
+                "z": 1
+            },
+            {
+                "drawing_id": "fa5e4147-522a-44c4-99f3-1e5c1c9fdf0e",
+                "rotation": 0,
+                "svg": "<svg height=\"25\" width=\"99\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\">192.0.2.2/30</text></svg>",
+                "x": -15,
+                "y": 64,
+                "z": 1
+            }
+        ],
+        "links": [
+            {
+                "filters": {},
+                "link_id": "9aa8cda5-28cc-4cb2-9dfa-a69a3b8c20ed",
+                "nodes": [
+                    {
+                        "adapter_number": 1,
+                        "label": {
+                            "rotation": 0,
+                            "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
+                            "text": "e1/0",
+                            "x": 73,
+                            "y": 1
+                        },
+                        "node_id": "c3d75927-0bc9-40ac-b751-8f95de5c5883",
+                        "port_number": 0
+                    },
+                    {
+                        "adapter_number": 1,
+                        "label": {
+                            "rotation": 0,
+                            "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
+                            "text": "e1/0",
+                            "x": -46,
+                            "y": 11
+                        },
+                        "node_id": "45b86205-ae3c-46a6-a2b3-a0bb168d6aa9",
+                        "port_number": 0
+                    }
+                ],
+                "suspend": false
+            },
+            {
+                "filters": {},
+                "link_id": "93ef951d-d0b1-4e8c-99f6-dc93b7273aa7",
+                "nodes": [
+                    {
+                        "adapter_number": 1,
+                        "label": {
+                            "rotation": 0,
+                            "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
+                            "text": "e1/1",
+                            "x": 41,
+                            "y": 42
+                        },
+                        "node_id": "45b86205-ae3c-46a6-a2b3-a0bb168d6aa9",
+                        "port_number": 1
+                    },
+                    {
+                        "adapter_number": 1,
+                        "label": {
+                            "rotation": 0,
+                            "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
+                            "text": "e1/0",
+                            "x": 37,
+                            "y": -38
+                        },
+                        "node_id": "63282d6f-3850-4139-9eca-b27d18542bc1",
+                        "port_number": 0
+                    }
+                ],
+                "suspend": false
+            }
+        ],
+        "nodes": [
+            {
+                "compute_id": "local",
+                "console": 5000,
+                "console_type": "telnet",
+                "first_port_name": null,
+                "height": 45,
+                "label": {
+                    "rotation": 0,
+                    "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
+                    "text": "A",
+                    "x": 25,
+                    "y": 18
+                },
+                "name": "A",
+                "node_id": "c3d75927-0bc9-40ac-b751-8f95de5c5883",
+                "node_type": "dynamips",
+                "port_name_format": "Ethernet{0}",
+                "port_segment_size": 0,
+                "properties": {
+                    "auto_delete_disks": true,
+                    "aux": null,
+                    "chassis": "2610",
+                    "clock_divisor": 8,
+                    "disk0": 0,
+                    "disk1": 0,
+                    "dynamips_id": 1,
+                    "exec_area": 64,
+                    "idlemax": 500,
+                    "idlepc": "",
+                    "idlesleep": 30,
+                    "image": "c2600-advsecurityk9-mz.124-15.t14.image",
+                    "image_md5sum": "485b25e6b06775dcb99eb204e3a1def4",
+                    "iomem": 5,
+                    "mac_addr": "c801.29de.0000",
+                    "mmap": true,
+                    "nvram": 128,
+                    "platform": "c2600",
+                    "ram": 160,
+                    "slot0": "C2600-MB-1E",
+                    "slot1": "NM-4E",
+                    "sparsemem": true,
+                    "system_id": "FTX0945W0MY",
+                    "wic0": null,
+                    "wic1": null,
+                    "wic2": null
+                },
+                "symbol": ":/symbols/router.svg",
+                "width": 66,
+                "x": -317,
+                "y": -48,
+                "z": 0
+            },
+            {
+                "compute_id": "local",
+                "console": 5001,
+                "console_type": "telnet",
+                "first_port_name": null,
+                "height": 45,
+                "label": {
+                    "rotation": 0,
+                    "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
+                    "text": "B",
+                    "x": 24,
+                    "y": 20
+                },
+                "name": "B",
+                "node_id": "45b86205-ae3c-46a6-a2b3-a0bb168d6aa9",
+                "node_type": "dynamips",
+                "port_name_format": "Ethernet{0}",
+                "port_segment_size": 0,
+                "properties": {
+                    "auto_delete_disks": true,
+                    "aux": null,
+                    "chassis": "2610",
+                    "clock_divisor": 8,
+                    "disk0": 0,
+                    "disk1": 0,
+                    "dynamips_id": 2,
+                    "exec_area": 64,
+                    "idlemax": 500,
+                    "idlepc": "",
+                    "idlesleep": 30,
+                    "image": "c2600-advsecurityk9-mz.124-15.t14.image",
+                    "image_md5sum": "485b25e6b06775dcb99eb204e3a1def4",
+                    "iomem": 5,
+                    "mac_addr": "c802.2a01.0000",
+                    "mmap": true,
+                    "nvram": 128,
+                    "platform": "c2600",
+                    "ram": 160,
+                    "slot0": "C2600-MB-1E",
+                    "slot1": "NM-4E",
+                    "sparsemem": true,
+                    "system_id": "FTX0945W0MY",
+                    "wic0": null,
+                    "wic1": null,
+                    "wic2": null
+                },
+                "symbol": ":/symbols/router.svg",
+                "width": 66,
+                "x": -63,
+                "y": -166,
+                "z": 0
+            },
+            {
+                "compute_id": "local",
+                "console": 5002,
+                "console_type": "telnet",
+                "first_port_name": null,
+                "height": 45,
+                "label": {
+                    "rotation": 0,
+                    "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
+                    "text": "C",
+                    "x": 23,
+                    "y": 18
+                },
+                "name": "C",
+                "node_id": "63282d6f-3850-4139-9eca-b27d18542bc1",
+                "node_type": "dynamips",
+                "port_name_format": "Ethernet{0}",
+                "port_segment_size": 0,
+                "properties": {
+                    "auto_delete_disks": true,
+                    "aux": null,
+                    "chassis": "2610",
+                    "clock_divisor": 8,
+                    "disk0": 0,
+                    "disk1": 0,
+                    "dynamips_id": 3,
+                    "exec_area": 64,
+                    "idlemax": 500,
+                    "idlepc": "",
+                    "idlesleep": 30,
+                    "image": "c2600-advsecurityk9-mz.124-15.t14.image",
+                    "image_md5sum": "485b25e6b06775dcb99eb204e3a1def4",
+                    "iomem": 5,
+                    "mac_addr": "c803.2a11.0000",
+                    "mmap": true,
+                    "nvram": 128,
+                    "platform": "c2600",
+                    "ram": 160,
+                    "slot0": "C2600-MB-1E",
+                    "slot1": "NM-4E",
+                    "sparsemem": true,
+                    "system_id": "FTX0945W0MY",
+                    "wic0": null,
+                    "wic1": null,
+                    "wic2": null
+                },
+                "symbol": ":/symbols/router.svg",
+                "width": 66,
+                "x": -49,
+                "y": 85,
+                "z": 0
+            }
+        ]
+    },
+    "type": "topology",
+    "variables": null,
+    "version": "2.1.7",
+    "zoom": 100
+}

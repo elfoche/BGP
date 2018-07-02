@@ -1,0 +1,5 @@
+Start QEMU with /usr/bin/qemu-system-x86_64 -name A2 -m 128M -smp cpus=1 -enable-kvm -machine smm=off -boot order=c -drive 'file=/home/foche/ownCloud/Foche/BGP LACNIC/M4_Actividad1_Practica/M4/Modulo4/project-files/qemu/72d11021-111c-4846-806d-1fb1d455f58a/hda_disk.qcow2,if=virtio,index=0,media=disk' -uuid 72d11021-111c-4846-806d-1fb1d455f58a -serial telnet:127.0.0.1:5003,server,nowait -monitor tcp:127.0.0.1:43603,server,nowait -net none -device virtio-net-pci,mac=0c:40:26:f5:8a:00,netdev=gns3-0 -netdev socket,id=gns3-0,udp=127.0.0.1:10021,localaddr=127.0.0.1:10020 -device virtio-net-pci,mac=0c:40:26:f5:8a:01,netdev=gns3-1 -netdev socket,id=gns3-1,udp=127.0.0.1:10023,localaddr=127.0.0.1:10022 -nographic
+
+Execution log:
+qemu-system-x86_64: warning: host doesn't support requested feature: CPUID.01H:ECX.vmx [bit 5]
+qemu-system-x86_64: terminating on signal 15 from pid 9854 (/usr/share/gns3/gns3-server/bin/python)

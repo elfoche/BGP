@@ -1,0 +1,22 @@
+A#show running-config	//Ver configuracion general que esta corriendo.
+hostname A
+
+interface Ethernet1/0
+ ip address 203.0.113.1 255.255.255.252
+ half-duplex
+
+router bgp 64400
+ no synchronization
+ bgp log-neighbor-changes
+ network 198.51.100.0
+ neighbor 203.0.113.2 remote-as 65000
+ no auto-summary
+
+ip forward-protocol nd
+ip route 198.51.100.0 255.255.255.0 Null0
+
+
+A#show ip bgp	//Ver contenido de la tabla BGP.
+   Network          Next Hop            Metric LocPrf Weight Path
+*> 198.51.100.0     0.0.0.0                  0         32768 i
+

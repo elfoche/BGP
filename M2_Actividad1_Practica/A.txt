@@ -1,0 +1,41 @@
+A#show running-config	//Ver configuracion general que esta corriendo.
+hostname A
+
+interface Ethernet1/0
+ ip address 198.51.100.1 255.255.255.252
+ half-duplex
+
+router bgp 64496
+ synchronization
+ bgp log-neighbor-changes
+ network 203.0.113.128 mask 255.255.255.128
+ neighbor 198.51.100.2 remote-as 64500
+ no auto-summary
+
+ip route 203.0.113.128 255.255.255.128 Null0 200
+
+
+A#show ip bgp summary	//Ver sesiones BGP establecidas. 
+Neighbor        V    AS MsgRcvd MsgSent   TblVer  InQ OutQ Up/Down  State/PfxRcd
+198.51.100.2    4 64500      41      42        2    0    0 00:38:39        0
+
+
+A#show ip bgp	//Ver contenido de la tabla BGP. 
+   Network          Next Hop            Metric LocPrf Weight Path
+*> 203.0.113.128/25 0.0.0.0                  0         32768 i
+
+
+A#show ip route	//Ver contenido de la tabla de Ruteo. 
+     203.0.113.0/25 is subnetted, 1 subnets
+S       203.0.113.128 is directly connected, Null0
+     198.51.100.0/30 is subnetted, 1 subnets
+C       198.51.100.0 is directly connected, Ethernet1/0
+
+
+A#show ip bgp neighbor 198.51.100.2 advertised-routes	//Ver rutas anunciadas a un peer adyacente. 
+   Network          Next Hop            Metric LocPrf Weight Path
+*> 203.0.113.128/25 0.0.0.0                  0         32768 i
+
+
+A#show ip bgp neighbors 198.51.100.2 routes //Ver rutas aprendidas de un peer adyacente.
+Total number of prefixes 0

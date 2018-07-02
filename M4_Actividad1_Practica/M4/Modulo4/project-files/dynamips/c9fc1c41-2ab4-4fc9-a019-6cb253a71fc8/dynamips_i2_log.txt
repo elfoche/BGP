@@ -1,0 +1,35 @@
+Jun 19 12:11:29.956 HYPERVISOR: Release 0.2.18-amd64/Linux (tag 2018033112)
+Jun 19 12:11:29.957 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 43709.
+Jun 19 12:11:29.966 HYPERVISOR: exec_cmd: hypervisor version 
+Jun 19 12:11:29.966 HYPERVISOR: exec_cmd: hypervisor working_dir /home/foche/ownCloud/Foche/BGP LACNIC/M4_Actividad1_Practica/M4/Modulo4/project-files/dynamips 
+Jun 19 12:11:29.966 GENERAL: working_dir=/home/foche/ownCloud/Foche/BGP LACNIC/M4_Actividad1_Practica/M4/Modulo4/project-files/dynamips
+Jun 19 12:11:29.967 HYPERVISOR: exec_cmd: hypervisor working_dir /home/foche/ownCloud/Foche/BGP LACNIC/M4_Actividad1_Practica/M4/Modulo4/project-files/dynamips/c9fc1c41-2ab4-4fc9-a019-6cb253a71fc8 
+Jun 19 12:11:29.967 GENERAL: working_dir=/home/foche/ownCloud/Foche/BGP LACNIC/M4_Actividad1_Practica/M4/Modulo4/project-files/dynamips/c9fc1c41-2ab4-4fc9-a019-6cb253a71fc8
+Jun 19 12:11:29.967 HYPERVISOR: exec_cmd: vm create Cliente1 2 c2600 
+Jun 19 12:11:29.967 VM: VM Cliente1 created.
+Jun 19 12:11:29.968 HYPERVISOR: exec_cmd: vm set_con_tcp_port Cliente1 5005 
+Jun 19 12:11:29.968 HYPERVISOR: exec_cmd: c2600 get_mac_addr Cliente1 
+Jun 19 12:11:29.970 HYPERVISOR: exec_cmd: vm set_ios Cliente1 /home/foche/GNS3/images/IOS/c2600-advsecurityk9-mz.124-15.t14.image 
+Jun 19 12:11:29.971 HYPERVISOR: exec_cmd: c2600 set_iomem Cliente1 5 
+Jun 19 12:11:29.971 HYPERVISOR: exec_cmd: c2600 set_mac_addr Cliente1 c802.3330.0000 
+Jun 19 12:11:29.972 HYPERVISOR: exec_cmd: vm set_ram Cliente1 160 
+Jun 19 12:11:29.972 HYPERVISOR: exec_cmd: vm set_sparse_mem Cliente1 1 
+Jun 19 12:11:30.269 HYPERVISOR: exec_cmd: nio create_udp udp-856d5e60-d9f6-4fa9-8c2b-7c4d6aff8fef 10008 127.0.0.1 10009 
+Jun 19 12:11:30.299 HYPERVISOR: exec_cmd: vm slot_add_nio_binding Cliente1 0 0 udp-856d5e60-d9f6-4fa9-8c2b-7c4d6aff8fef 
+Jun 19 12:11:30.299 HYPERVISOR: exec_cmd: vm get_status Cliente1 
+Jun 19 12:11:32.765 HYPERVISOR: exec_cmd: vm create Ghost 0 c2600 
+Jun 19 12:11:32.766 VM: VM Ghost created.
+Jun 19 12:11:32.766 HYPERVISOR: exec_cmd: vm set_ios Ghost /home/foche/GNS3/images/IOS/c2600-advsecurityk9-mz.124-15.t14.image 
+Jun 19 12:11:32.767 HYPERVISOR: exec_cmd: vm set_ghost_status Ghost 1 
+Jun 19 12:11:32.767 HYPERVISOR: exec_cmd: vm set_ghost_file Ghost '/home/foche/ownCloud/Foche/BGP LACNIC/M4_Actividad1_Practica/M4/Modulo4/project-files/dynamips/c2600-advsecurityk9-mz.124-15.t14.image-160.ghost' 
+Jun 19 12:11:32.768 HYPERVISOR: exec_cmd: vm get_status Cliente1 
+Jun 19 12:11:32.769 HYPERVISOR: exec_cmd: vm set_config Cliente1 configs/i2_startup-config.cfg 
+Jun 19 12:11:32.769 HYPERVISOR: exec_cmd: vm start Cliente1 
+Jun 19 12:12:00.251 HYPERVISOR: exec_cmd: vm get_status Cliente1 
+Jun 19 12:12:00.252 HYPERVISOR: exec_cmd: vm stop Cliente1 
+Jun 19 12:12:00.471 VM: VM Cliente1 shutdown.
+Jun 19 12:12:00.471 HYPERVISOR: exec_cmd: vm extract_config Cliente1 
+Jun 19 12:14:16.706 HYPERVISOR: Stopped.
+Jun 19 12:14:16.706 VM: VM Ghost destroyed.
+Jun 19 12:14:16.706 VM: VM Cliente1 destroyed.
+Jun 19 12:14:16.715 GENERAL: reset done.

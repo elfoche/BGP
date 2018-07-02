@@ -1,0 +1,58 @@
+B#show running-config	//Ver configuracion general que esta corriendo.
+hostname B
+
+interface Ethernet1/0
+ ip address 198.51.100.2 255.255.255.252
+ half-duplex
+
+interface Ethernet1/1
+ ip address 198.51.100.5 255.255.255.252
+ half-duplex
+
+router bgp 64500
+ synchronization
+ bgp log-neighbor-changes
+ neighbor 198.51.100.1 remote-as 64496
+ neighbor 198.51.100.6 remote-as 64500
+ no auto-summary
+
+
+B#show ip bgp summary	//Ver sesiones BGP establecidas.
+Neighbor        V    AS MsgRcvd MsgSent   TblVer  InQ OutQ Up/Down  State/PfxRcd
+198.51.100.1    4 64496      60      59        2    0    0 00:56:25        1
+198.51.100.6    4 64500      61      60        2    0    0 00:56:24        2
+
+
+B#show ip bgp	//Ver contenido de la tabla BGP.
+   Network          Next Hop            Metric LocPrf Weight Path
+* i192.0.2.0        198.51.100.10            0    100      0 64505 i
+* i203.0.113.0/25   198.51.100.10            0    100      0 64505 i
+*> 203.0.113.128/25 198.51.100.1             0             0 64496 i
+
+
+B#show ip route	//Ver contenido de la tabla de Ruteo. 
+     203.0.113.0/25 is subnetted, 1 subnets
+B       203.0.113.128 [20/0] via 198.51.100.1, 00:41:49
+     198.51.100.0/30 is subnetted, 2 subnets
+C       198.51.100.0 is directly connected, Ethernet1/0
+C       198.51.100.4 is directly connected, Ethernet1/1
+
+
+B#show ip bgp neighbor 198.51.100.1 advertised-routes	//Ver rutas anunciadas a un peer adyacente.
+Total number of prefixes 0
+
+
+B#show ip bgp neighbor 198.51.100.6 advertised-routes	//Ver rutas anunciadas a un peer adyacente.
+   Network          Next Hop            Metric LocPrf Weight Path
+*> 203.0.113.128/25 198.51.100.1             0             0 64496 i
+
+
+B#show ip bgp neighbors 198.51.100.1 routes	//Ver rutas aprendidas de un peer adyacente.
+   Network          Next Hop            Metric LocPrf Weight Path
+*> 203.0.113.128/25 198.51.100.1             0             0 64496 i
+
+
+B#show ip bgp neighbors 198.51.100.6 routes	//Ver rutas aprendidas de un peer adyacente.
+   Network          Next Hop            Metric LocPrf Weight Path
+* i192.0.2.0        198.51.100.10            0    100      0 64505 i
+* i203.0.113.0/25   198.51.100.10            0    100      0 64505 i

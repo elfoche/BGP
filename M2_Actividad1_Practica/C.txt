@@ -1,0 +1,59 @@
+C#show running-config	//Ver configuracion general que esta corriendo.
+hostname C
+
+interface Ethernet1/0
+ ip address 198.51.100.6 255.255.255.252
+ half-duplex
+
+interface Ethernet1/1
+ ip address 198.51.100.9 255.255.255.252
+ half-duplex
+
+router bgp 64500
+ synchronization
+ bgp log-neighbor-changes
+ neighbor 198.51.100.5 remote-as 64500
+ neighbor 198.51.100.10 remote-as 64505
+ no auto-summary
+
+
+C#show ip bgp summary	//Ver sesiones BGP establecidas.
+Neighbor        V    AS MsgRcvd MsgSent   TblVer  InQ OutQ Up/Down  State/PfxRcd
+198.51.100.5    4 64500      70      71        3    0    0 01:06:11        1
+198.51.100.10   4 64505      71      69        3    0    0 01:06:11        2
+
+
+C#show ip bgp	//Ver contenido de la tabla BGP.
+   Network          Next Hop            Metric LocPrf Weight Path
+*> 192.0.2.0        198.51.100.10            0             0 64505 i
+*> 203.0.113.0/25   198.51.100.10            0             0 64505 i
+* i203.0.113.128/25 198.51.100.1             0    100      0 64496 i
+
+
+C#show ip route	//Ver contenido de la tabla de Ruteo.
+     203.0.113.0/25 is subnetted, 1 subnets
+B       203.0.113.0 [20/0] via 198.51.100.10, 00:47:11
+     198.51.100.0/30 is subnetted, 2 subnets
+C       198.51.100.4 is directly connected, Ethernet1/0
+C       198.51.100.8 is directly connected, Ethernet1/1
+B    192.0.2.0/24 [20/0] via 198.51.100.10, 00:46:41
+
+
+C#show ip bgp neighbor 198.51.100.5 advertised-routes	//Ver rutas anunciadas a un peer adyacente.
+   Network          Next Hop            Metric LocPrf Weight Path
+*> 192.0.2.0        198.51.100.10            0             0 64505 i
+*> 203.0.113.0/25   198.51.100.10            0             0 64505 i
+
+C#show ip bgp neighbor 198.51.100.10 advertised-routes	//Ver rutas anunciadas a un peer adyacente.
+Total number of prefixes 0
+
+
+C#show ip bgp neighbors 198.51.100.5 routes	//Ver rutas aprendidas de un peer adyacente.
+   Network          Next Hop            Metric LocPrf Weight Path
+* i203.0.113.128/25 198.51.100.1             0    100      0 64496 i
+
+
+C#show ip bgp neighbors 198.51.100.10 routes	//Ver rutas aprendidas de un peer adyacente.
+   Network          Next Hop            Metric LocPrf Weight Path
+*> 192.0.2.0        198.51.100.10            0             0 64505 i
+*> 203.0.113.0/25   198.51.100.10            0             0 64505 i

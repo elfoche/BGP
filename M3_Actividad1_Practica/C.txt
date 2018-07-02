@@ -1,0 +1,21 @@
+C#show running-config	//Ver configuracion general que esta corriendo.
+hostname C
+
+interface Ethernet1/0
+ ip address 192.0.2.2 255.255.255.252
+ half-duplex
+
+router bgp 65000
+ no synchronization
+ bgp log-neighbor-changes
+ neighbor 192.0.2.1 remote-as 65000
+ no auto-summary
+         
+ip forward-protocol nd
+
+
+C#show ip bgp	//Ver contenido de la tabla BGP.
+   Network          Next Hop            Metric LocPrf Weight Path
+* i198.51.100.0     203.0.113.1              0    300      0 64400 i
+
+
